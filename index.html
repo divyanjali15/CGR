@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Gym</h1>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#timings">Timings</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#gym-gears">Gym Gears</a></li>
+                <li><a href="#nutrition">Nutrition & Supplements</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Home">
+        <div class="hero">
+            <div class="hero__content">
+                <h1 class="animate-hero">CGR GYM</h1>
+                <p class="animate-hero">Join Now for Rs. 800</p>
+                <a href="#registration" ><button class="myButton"> Register</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" style="background: url('112.jpeg')">
+        <h2>Registration</h2>
+<title>Gym Registration</title>
+<style>
+    .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+        text-align: center;
+    }
+    form {
+        margin-top: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"], input[type="email"], input[type="password"],input[type="number"],input[type="tel"]{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .message {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+    }
+   
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Gym Registration Form</h1>
+    <form action="sucess.html" method="post">
+        <label for="firstName">First Name</label>
+        <input type="text" required>
+        <label for="lastName">Last Name</label>
+        <input type="text" required>
+        <label for="age">Age</label>
+        <input type="number" required>
+        <label for="Address">Address</label>
+        <input type="text" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <label for="moblie">Moblie No</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+        <label>Package you want to choose:</label>
+        <div class="dropdown-container">
+            <select id="gym-package" style="display: block;" required>
+                <option value="basic">Basic</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+            </select>
+            <br>
+            <input type="submit" value="Register">
+</div>
+    </form>
+   
+</div>
+<script>
+    // JavaScript
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        var fullName = document.getElementById('fullName').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+
+        // Simulate registration (replace with actual registration logic)
+        setTimeout(function() {
+            document.getElementById('message').style.display = 'block';
+        }, 1000);
+    });
+</script>
+        <!-- Registration form goes here -->
+         <br><br>
+    </section>
+    <section id="packages" style="background: url('120.jpg')">
+        <br>
+        <h2>Packages</h2>
+    <title>Gym Packages</title>
+  <center>
+    <br><br>  <br><br>
+    <div class="packages">
+        <div class="package">
+            <div class="package-header">Basic</div>
+            <div class="package-body">
+                <div class="price">RS.800/month</div>
+                <ul>
+                    <li>Access to gym equipment</li>
+                    <li>Free Wi-Fi</li>
+                    <li>Locker room access</li>
+                    <li>1 personal training session</li>
+                </ul>
+                <a href="#registration"><button>Sign Up</button></a>
+            </div>
+        </div>
+        <div class="package">
+            <div class="package-header">Standard</div>
+            <div class="package-body">
+                <div class="price">Rs.1000/month</div>
+                <ul>
+                    <li>All Basic features</li>
+                    <li>Unlimited group classes</li>
+                    <li>Access to swimming pool</li>
+                    <li>3 personal training sessions</li>
+                </ul>
+                <a href="#registration"><button>Sign Up</button></a>
+            </div>
+        </div>
+        <div class="package">
+            <div class="package-header">Premium</div>
+            <div class="package-body">
+                <div class="price">Rs.1700/month</div>
+                <ul>
+                    <li>All Standard features</li>
+                    <li>Sauna access</li>
+                    <li>Diet consultation</li>
+                    <li>Unlimited personal training</li>
+                </ul>
+                <a href="#registration"><button>Sign Up</button></a>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+    
+</center><br><br>
+    </section>
+    <section id="timings" style="background-color: #333;">
+        <center>
+            <br>
+        <h3 style="font-size: 28px;">Timings</h3>
+        <!-- Timings information goes here -->
+<br><br><br>
+        <div class="timings">
+            <h2>Operating Hours</h2>
+            <ul>
+                <li>Monday: 6:00 AM - 10:00 PM</li>
+                <li>Tuesday: 6:00 AM - 10:00 PM</li>
+                <li>Wednesday: 6:00 AM - 10:00 PM</li>
+                <li>Thursday: 6:00 AM - 10:00 PM</li>
+                <li>Friday: 6:00 AM - 10:00 PM</li>
+                <li>Saturday: 8:00 AM - 8:00 PM</li>
+                <li>Sunday: 8:00 AM - 8:00 PM</li>
+            </ul>
+        </div>
+        <br>
+        <br> <br> <br>
+    </center>
+    </section>
+    <section id="offers">
+        <br><br>
+        <h2>Offers</h2>
+        <!-- Offers information goes here -->
+         <br><br><br>
+        <div class="offers">
+            <div class="offer">
+                <div class="offer-header">Summer Shred</div>
+                <div class="offer-body">
+                    <div class="price">Save 30%</div>
+                    <ul>
+                        <li>3-month membership</li>
+                        <li>Access to all classes</li>
+                        <li>2 personal training sessions</li>
+                        <li>Free gym merchandise</li>
+                    </ul>
+                    <button>Claim Offer</button>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-header">New Year, New You</div>
+                <div class="offer-body">
+                    <div class="price">2 Months Free</div>
+                    <ul>
+                        <li>12-month membership</li>
+                        <li>Unlimited group classes</li>
+                        <li>5 personal training sessions</li>
+                        <li>Nutrition plan</li>
+                    </ul>
+                    <button>Claim Offer</button>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-header">Buddy Pass</div>
+                <div class="offer-body">
+                    <div class="price">Bring a Friend Free</div>
+                    <ul>
+                        <li>6-month membership</li>
+                        <li>Access for you and a friend</li>
+                        <li>3 personal training sessions each</li>
+                        <li>Special group class access</li>
+                    </ul>
+                    <button>Claim Offer</button>
+                </div>
+            </div>
+        </div><br>
+        <br><br><br>
+    </section>
+    <section id="gym-gears" >
+
+            <style>
+                .gear-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                    gap: 20px;
+                    width: 100%;
+                    max-width: 1200px;
+                }
+                .gear-item {
+                    background: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    overflow: hidden;
+                    text-align: center;
+                    transition: transform 0.3s;
+                }
+                .gear-item:hover {
+                    transform: translateY(-10px);
+                }
+                .gear-image {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .gear-details {
+                    padding: 20px;
+                }
+                .gear-name {
+                    font-size: 1.5em;
+                    margin: 10px 0;
+                    color: #333;
+                }
+                .gear-price {
+                    font-size: 1.2em;
+                    color: #0073e6;
+                    margin: 10px 0;
+                }
+                .gear-description {
+                    font-size: 1em;
+                    color: #777;
+                    margin: 10px 0;
+                }
+                .gear button {
+                    background: #0073e6;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 1em;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: background 0.3s;
+                }
+                .gear button:hover {
+                    background: #005bb5;
+                }
+            </style>
+<center>
+            <h2>Gym Gears</h2>
+            <br><br><br><br>
+            <div class="gear-grid">
+                <div class="gear-item">
+                    <img src="114.jpeg" alt="Dumbbells" class="gear-image">
+                    <div class="gear-details">
+                        <div class="gear-name">Dumbbells</div>
+                        <div class="gear-price">Rs.1250</div>
+                        <div class="gear-description">Set of two adjustable dumbbells.</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="gear-item">
+                    <img src="119.png" alt="Yoga Mat" class="gear-image">
+                    <div class="gear-details">
+                        <div class="gear-name">Yoga Mat</div>
+                        <div class="gear-price">Rs.880</div>
+                        <div class="gear-description">Non-slip yoga mat, perfect for all levels.</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="gear-item">
+                    <img src="116.jpg" alt="Resistance Bands" class="gear-image">
+                    <div class="gear-details">
+                        <div class="gear-name">Resistance Bands</div>
+                        <div class="gear-price">Rs.780</div>
+                        <div class="gear-description">Set of 5 resistance bands with different levels.</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="gear-item">
+                    <img src="117.jpg" alt="Kettlebell" class="gear-image">
+                    <div class="gear-details">
+                        <div class="gear-name">Kettlebell</div>
+                        <div class="gear-price">Rs.1050</div>
+                        <div class="gear-description">20 lb kettlebell for strength training.</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+     </center>   <br><br><br>
+    </section>
+    <section id="nutrition">
+    
+        <h2>Nutrition & Supplements</h2>
+        <!-- Nutrition & supplements information goes here -->
+    <center>
+        <br><br><br><br><br>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="181.png" alt="Protein Powder" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Protein Powder</div>
+                        <div class="product-price">Rs.799</div>
+                        <div class="product-description">High-quality whey protein for muscle building.</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="110.jpg" alt="BCAA" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">BCAA</div>
+                        <div class="product-price">Rs.689</div>
+                        <div class="product-description">Branched-chain amino acids for muscle recovery.</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="180.jpg" alt="Pre-Workout" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Pre-Workout</div>
+                        <div class="product-price">Rs.999</div>
+                        <div class="product-description">Energy-boosting formula to enhance your workouts.</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="183.jpg" alt="Multivitamins" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Multivitamins</div>
+                        <div class="product-price">Rs.789</div>
+                        <div class="product-description">Daily multivitamins to support overall health.</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br></center>
+    </section>
+    <br><br>
+    <footer>
+        <p>&copy; 2024 CGR Gym. All rights reserved.</p>
+    </footer>
+</body>
+</html>

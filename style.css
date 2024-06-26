@@ -1,0 +1,424 @@
+/* Styles for header and navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px){
+
+    body.active{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .navbar__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 100px);
+        position: absolute;
+        width: 100%;
+        top: -1000px;
+    }
+
+    .navbar__menu.active{
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+        height: 100vh;
+        font-size: 1.5rem;
+        background: var(--black);
+    }
+
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background:var(--white);
+        display: block;
+        cursor: pointer;
+        
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    } 
+    
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+}
+
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .gear-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+    }
+    .gear-item {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .gear-item:hover {
+        transform: translateY(-10px);
+    }
+    .gear-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .gear-details {
+        padding: 20px;
+    }
+    .gear-name {
+        font-size: 1.5em;
+        margin: 10px 0;
+        color: #333;
+    }
+    .gear-price {
+        font-size: 1.2em;
+        color: #0073e6;
+        margin: 10px 0;
+    }
+    .gear-description {
+        font-size: 1em;
+        color: #777;
+        margin: 10px 0;
+    }
+    .gear button {
+        background: #0073e6;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+    .gear button:hover {
+        background: #005bb5;
+    }   
+    
+    
+}
+
+/* Styles for sections */
+section {
+    margin: 20px 0;
+}
+
+section h2 {
+    color: #050505;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+section h3 {
+    color: #fff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+}
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.offer {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.offer:hover {
+    transform: translateY(-10px);
+}
+.offer-header {
+    background: #0073e6;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.offer-body {
+    padding: 20px;
+}
+.offer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.offer ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.offer ul li:last-child {
+    border-bottom: none;
+}
+.offer .price {
+    font-size: 2em;
+    margin: 20px 0;
+}
+.offer button {
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.offer button:hover {
+    background: #005bb5;
+}
+/* Styles for footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.25em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.hero{
+    background: url('112.jpeg') ;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    
+    color: #fff;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero__content{
+    color: var(--white);
+    padding: 3rem 1rem;
+    line-height: 1;
+}
+
+.hero__content h1{
+    font-size: clamp(3rem, 8vw, 7rem);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    
+}
+
+.hero__content p{
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    margin-bottom: 3rem;
+    
+}
+
+/* Styles for the button */
+.myButton {
+    background-color: #feffff; /* Button background color */
+    color: #131111; /* Button text color */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Button text font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.product-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.product-item:hover {
+    transform: translateY(-10px);
+}
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.product-details {
+    padding: 20px;
+}
+.product-name {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+.product-price {
+    font-size: 1.2em;
+    color: #0073e6;
+    margin: 10px 0;
+}
+.product-description {
+    font-size: 1em;
+    color: #777;
+    margin: 10px 0;
+}
+.product button {
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.product button:hover {
+    background: #005bb5;
+}
+
+
+/* Hover effect */
+.myButton:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+ 
+.packages {
+    display: flex;
+    gap: 60px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+.package {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    
+}
+.package-header {
+    background: #0073e6;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.package-body {
+    padding: 20px;
+}
+.package ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.package:hover{
+    transform: translateY(-10px);
+}
+.package ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.package ul li:last-child {
+    border-bottom: none;
+}
+.package .price {
+    font-size: 2em;
+    margin: 20px 0;
+}
+.package button {
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.package button:hover {
+    background: #005bb5;
+}
+.dropdown-container {
+    margin-top: 20px;
+}
+.dropdown-container select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+}
+.dropdown-container select:focus {
+  border-color: #0073e6;
+}
+.timings {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+.timings h2 {
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+.timings ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.timings ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.timings ul li:last-child {
+    border-bottom: none;
+}
